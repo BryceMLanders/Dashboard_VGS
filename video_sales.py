@@ -28,8 +28,8 @@ def videogamessales_sales():
  
     # A constant that defines the record fields that we wish to retrieve.
     FIELDS = {
-        '_id': False, 'Name': True, 'Year': True, 'Platform': True,
-        'Global_Sales': True
+        '_id': False, 'Name': True, 'Year': True, 'Platform': True, 'Rank': True, 'Genre': True, 
+        'Global_Sales': True, 'Publisher': True, 'NA_Sales': True, 'EU_Sales': True, 'JP_Sales': True, 'Other_Sales': True, 'Global_Sales': True
     }
  
     # Open a connection to MongoDB using a with statement such that the

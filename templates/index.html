@@ -14,28 +14,43 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="./">Video Game Sales</a>
+        <!-- menu select -->
+      <div class="col-sm-12">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Video game
+          </div>
+          <div class="chart-stage">
+            <div id="menu-select"></div>
+          </div>
+        </div>
+      </div>
+      <!-- menu select -->
       </div>
     </div>
   </div>
+   <!-- Sales -->
   <div  id="outer" class="container-fluid">
     <div class="row">
-      <div class="col-sm-8">
-        <div class="row">
-          <!-- Time Chart -->
-          <div class="col-sm-12">
+          <div class="col-sm-8">
             <div class="chart-wrapper">
               <div class="chart-title">
                 Sales by Year
               </div>
               <div class="chart-stage">
-                <div id="time-chart"></div>
+              <div id="time-chart"></div>
+              <span>
+          <a class="reset"
+            href="javascript:magnitudeChart.filterAll();dc.redrawAll();"
+            style="display: none;">
+            reset
+          </a>
+        </span>
               </div>
             </div>
           </div>
-          <!-- Time Chart -->
-
           <!-- Platforms -->
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <div class="chart-wrapper">
               <div class="chart-title">
                 Platforms
@@ -45,6 +60,23 @@
               </div>
             </div>
           </div>
+          </div>
+  <!-- Publisher -->
+  <div class="row"
+  <div class="col-sm-8">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Publisher Sales
+              </div>
+              <div class="chart-stage">
+                <div id="publisher-chart"></div>
+              </div>
+            </div>
+          </div>                
+  </div>
+<div class="button">
+  <a href="javascript:dc.filterAll(); dc.renderAll();"><button type="button">Reset All</button></a>
+</div>
       
       
       

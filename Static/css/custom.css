@@ -1,0 +1,18 @@
+#publisher-chart .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-45deg);
+}
+
+.application {
+    padding-top: 150px !important;
+}
+
+.button {
+    border: solid;
+    border-color: black;
+    color: royalblue;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
