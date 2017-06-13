@@ -8,11 +8,51 @@
 }
 
 .button {
-    border: solid;
-    border-color: black;
-    color: royalblue;
-    text-align: center;
-    text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+  padding: 5px 5px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:royalblue;
+  border: none;
+  border-radius: 15px;
+  /*box-shadow: 0 4px #999*/
+}
+.button:hover {background-color: #DC143C}
+
+.button:active {
+  background-color: #DC143C;
+  /*box-shadow: 0 5px #666;*/
+  transform: translateY(4px);
+}
+
+.dc-data-count .filter-count {
+    color: #3182bd;
+    font-weight: bold;
+}
+
+.dc-data-count .total-count {
+    color: #3182bd;
+    font-weight: bold;
+}
+
+
+.dc-chart g.deselected text {
+    display: none;
+}
+
+.bar {
+    color: #DC143C !important;
+}
+
+.chart-wrapper {
+    color: #DC143C !important;
+}
+
+.row2 {
+    padding: 0px !important;
+    margin: 0px !important;
 }
