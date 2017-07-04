@@ -1,1 +1,1 @@
-web: gunicorn donations:app
+web: gunicorn video_sales:app
