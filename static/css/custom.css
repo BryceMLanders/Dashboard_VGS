@@ -1,0 +1,75 @@
+#publisher-chart .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-45deg);
+}
+
+.application {
+    padding-top: 150px !important;
+}
+
+.button {
+    display: inline-block;
+  padding: 5px 5px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:#5440b0;
+  border: none;
+  border-radius: 15px;
+  /*box-shadow: 0 4px #999*/
+}
+.button:hover {background-color: #B03F63}
+
+.button:active {
+  background-color: #B03F63;
+  /*box-shadow: 0 5px #666;*/
+  transform: translateY(4px);
+}
+
+.dc-data-count .filter-count {
+    color: #B03F63;
+    font-weight: bold;
+}
+
+.dc-data-count .total-count {
+    color: #B03F63;
+    font-weight: bold;
+}
+
+
+.dc-chart g.deselected text {
+    display: none;
+}
+
+.bar {
+    fill: #5440b0!important;
+}
+
+.chart-wrapper {
+    color: #9bb03f !important;
+}
+
+.row2 {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+select.dc-select-menu {
+  background-color: #5440b0;
+  color: white;
+}
+
+.dc-select-menu {
+  background-color: #5440b0;
+}
+
+.dc-select-option {
+fill: white;
+color: white;
+background-color: white;
+
+
+}
