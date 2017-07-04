@@ -1,6 +1,7 @@
 queue()
    .defer(d3.json, "/videogamessales/sales")
    .await(makeGraphs);
+
  
 function makeGraphs(error, projectsJson) {
 
@@ -79,7 +80,7 @@ function makeGraphs(error, projectsJson) {
     var platformChart = dc.pieChart("#platform-chart");
     var publisherChart = dc.barChart("#publisher-chart");
     var genreChart = dc.pieChart("#genre-chart");
-    var numbertotalSalesND = dc.numberDisplay("#number-totalsales-nd");
+    var numbertotalSalesND = dc.numberDisplay("#number-totalsales-nd")
 
 selectField = dc.selectMenu('#menu-select')
         .dimension(nameDim)
@@ -88,15 +89,18 @@ selectField = dc.selectMenu('#menu-select')
     var topsalesChart = dc.compositeChart("#topsales-chart");
 
 numbertotalSalesND 
-    .formatNumber(d3.format("d"))
     .valueAccessor(function (d) {
-        return d;
+        return Math.round (d * 1000000);
     })
     .group(TGS)
-    .formatNumber(d3.format(".3s"));
+    .formatNumber(d3.format(","));
+
+var chartWidth = $("#resizeChart").width();
+if(chartWidth >= 480){
+}
 
  yearChart
-       .width(1200)
+       .width(chartWidth)
        .height(500)
        .margins({top: 10, right: 50, bottom: 30, left: 50})
        .dimension(yearDim)
@@ -106,12 +110,12 @@ numbertotalSalesND
        .xUnits(dc.units.ordinal)
        .elasticY(true)
        .xAxisLabel("Year")
-       .yAxisLabel("Sales")
+       .yAxisLabel("Sales (In Millions)")
        .yAxis().ticks(10);
 
 platformChart
        .height(220)
-       .width(300)
+       .width(500)
        .radius(110)
        .transitionDuration(1500)
        .dimension(platformDim)
@@ -122,7 +126,7 @@ platformChart
 
 genreChart
        .height(220)
-       .width(300)
+       .width(500)
        .radius(110)
        .transitionDuration(1500)
        .dimension(genreDim)
@@ -132,7 +136,7 @@ genreChart
        .ordering( function(d) { return -5.0 * +d.value; });
 
 publisherChart
-        .width(1200)
+        .width(chartWidth)
         .height(500)
         .margins({top: 10, right: 50, bottom: 100, left: 50})
         .dimension(publisherDim)
@@ -143,14 +147,17 @@ publisherChart
         .xUnits(dc.units.ordinal)
         .elasticY(true)
         .xAxisLabel("Publisher")
+        .yAxisLabel("Sales (In Millions)")
         .yAxis().ticks(10);
 
 topsalesChart
         .width(990)
         .height(200)
-        .x(d3.time.scale().domain([minyear, maxyear]))
+        .x(d3.scale.linear().domain([minyear, maxyear]))
         .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
         .renderHorizontalGridLines(true)
+        .xAxisLabel("Year")
+        .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
         .compose([
             dc.lineChart(topsalesChart)
                 .dimension(yearDim)
@@ -167,8 +174,25 @@ topsalesChart
         ])
         .brushOn(false);
 
- 
 
+$(window).resize(function() {
+        // Recalculate chart size
+        chartWidth = $("#pieChart").width();
+        if(chartWidth >= 480){
+            chartReduce = 200;
+        } else {
+            chartReduce = chartWidth * 0.3;
+        }
+
+
+publisherChart
+        .width(chartReduce)
+        .redraw();
+
+yearChart
+        .width(chartReduce)
+        .redraw();
+});
  
    dc.renderAll();
 }

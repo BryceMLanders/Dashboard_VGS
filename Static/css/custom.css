@@ -16,26 +16,26 @@
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color:royalblue;
+  background-color:#5440b0;
   border: none;
   border-radius: 15px;
   /*box-shadow: 0 4px #999*/
 }
-.button:hover {background-color: #DC143C}
+.button:hover {background-color: #B03F63}
 
 .button:active {
-  background-color: #DC143C;
+  background-color: #B03F63;
   /*box-shadow: 0 5px #666;*/
   transform: translateY(4px);
 }
 
 .dc-data-count .filter-count {
-    color: #3182bd;
+    color: #B03F63;
     font-weight: bold;
 }
 
 .dc-data-count .total-count {
-    color: #3182bd;
+    color: #B03F63;
     font-weight: bold;
 }
 
@@ -45,14 +45,31 @@
 }
 
 .bar {
-    color: #DC143C !important;
+    fill: #5440b0!important;
 }
 
 .chart-wrapper {
-    color: #DC143C !important;
+    color: #9bb03f !important;
 }
 
 .row2 {
     padding: 0px !important;
     margin: 0px !important;
+}
+
+select.dc-select-menu {
+  background-color: #5440b0;
+  color: white;
+}
+
+.dc-select-menu {
+  background-color: #5440b0;
+}
+
+.dc-select-option {
+fill: white;
+color: white;
+background-color: white;
+
+
 }

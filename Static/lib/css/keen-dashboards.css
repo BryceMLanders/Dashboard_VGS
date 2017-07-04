@@ -28,8 +28,8 @@ body.application hr {
 
 
 .navbar-inverse {
-  background-color: #DC143C;
-  border-color: #333;
+  background-color: #3fb08c;
+  border-color: #5440b0;
 }
 .navbar-inverse .navbar-nav > li > a,
 .navbar a.navbar-brand {
@@ -45,7 +45,7 @@ body.application hr {
 }
 .chart-wrapper .chart-title {
   border-bottom: 1px solid white;
-  color:#DC143C;
+  color: #5440b0;
   font-size: 14px;
   font-weight: 200;
   padding: 7px 10px 4px;
