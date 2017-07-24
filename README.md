@@ -1,16 +1,26 @@
-# videogamessales
+# Video Games by Sales
 
-
-One Paragraph of project description goes here
+Graphs driven by D3(D3.js) Data is a JavaScript library for visualizing data using web standards. D3 helps you bring data to life using SVG, Canvas and HTML. D3 combines powerful visualization and interaction techniques with a data-driven approach to DOM manipulation, giving you the full capabilities of modern browsers and the freedom to design the right visual interface for your data.
 
 ## Getting Started
+If you use npm, npm install d3. Otherwise, download the latest release. The released bundle supports anonymous AMD, CommonJS, and vanilla environments. You can load directly from d3js.org, CDNJS, or unpkg. For example:  
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+<script src="https://d3js.org/d3.v4.js"></script>  
+
+For the minified version:  
+
+<script src="https://d3js.org/d3.v4.min.js"></script>  
+
+
+In Node:
+var d3 = require("d3");
+You can also require individual modules and combine them into a d3 object using Object.assign:
+var d3 = Object.assign({}, require("d3-format"), require("d3-geo"), require("d3-geo-projection"));
+
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
+Check requirements.txt file. Contains required pip install applications. 
 ```
 Give examples
 ```
@@ -63,27 +73,15 @@ Add additional notes about how to deploy this on a live system
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Bryce Landers** - *Initial work* - [PurpleBooth](https://github.com/Brycemlanders)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
+* Richard Dalton Instructor at Code Institute. 
 * Inspiration
 * etc
-
