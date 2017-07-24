@@ -120,7 +120,7 @@ platformChart
        .transitionDuration(1500)
        .dimension(platformDim)
        .group(numByPlatform)
-       .cap(10) 
+       .cap(5) 
        .minAngleForLabel(.10) 
        .ordering( function(d) { return -5.0 * +d.value; });
 
@@ -131,7 +131,7 @@ genreChart
        .transitionDuration(1500)
        .dimension(genreDim)
        .group(numByGenre)
-       .cap(10)
+       .cap(5)
        .minAngleForLabel(.30) 
        .ordering( function(d) { return -5.0 * +d.value; });
 
